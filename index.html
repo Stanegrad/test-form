@@ -11,38 +11,27 @@
   
 <div class="login-box">
   <h2>Contact Us</h2>
-  <form netlify>
-    <div class="maindiv">
-        <div class="user-box">
-        <input type="text" name="Full Name" required="">
-        <label>Full Name</label>
-        </div>
-        <div class="user-box">
-        <input type="text" name="Mobile No" required="">
-        <label>Mobile No</label>
-        </div>
-        <div class="user-box">
-            <input type="email" name="Email" required="">
-            <label>Email Address</label>
-        </div>
-        <div class="user-box">
-            <input type="text" name="Enquiry" required="">
-            <label>Enquiry</label>
-        </div>
-        <button class="submit">
-            <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Contact
-            </a>
-        </button>
-    </div>
-    <div class="submitted">
-        <p>Thanks for submitting. </br> You'll hear from us soon 👏</p>
-    </div>
+  <form name="contact" method="POST" data-netlify="true">
+    <p>
+      <label>Your Name: <input type="text" name="name" /></label>
+    </p>
+    <p>
+      <label>Your Email: <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <label>Your Role: <select name="role[]" multiple>
+        <option value="leader">Leader</option>
+        <option value="follower">Follower</option>
+      </select></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message"></textarea></label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
   </form>
+  
 </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
